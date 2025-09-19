@@ -3,6 +3,10 @@ import java.util.*;
 public class AddressBook {
     private Dictionary<String, BuddyInfo> buddies;
 
+    public AddressBook(){
+        buddies = new Hashtable<>();
+    }
+
     public void addBuddy(BuddyInfo buddy){
         if(!buddy.getName().equals("Unknown")){
             buddies.put(buddy.getName(), buddy);
