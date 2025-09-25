@@ -17,6 +17,19 @@ public class AddressBook {
         buddies.remove(buddy.getName());
     }
 
+    public void printAddressBook(){
+        Enumeration<String> keys = buddies.keys();
+
+        while(keys.hasMoreElements()){
+            String key = keys.nextElement();
+            BuddyInfo buddy = buddies.get(key);
+            System.out.println("Name: " + buddy.getName());
+            System.out.println("Address: " + buddy.getAddress());
+            System.out.println("Phone: " + buddy.getPhone());
+            System.out.println("");
+        }
+    }
+
     public static void main(String[] args){
         System.out.println("Address Book");
         System.out.println("");
